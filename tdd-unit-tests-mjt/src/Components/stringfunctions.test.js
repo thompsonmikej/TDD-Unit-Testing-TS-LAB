@@ -22,11 +22,11 @@ describe('concatenate two smaller strings / words', () => {
     value.join(" ");
 
     it('should have a space between words', () => {
-        expect(value).has(" ");
+        expect(value).toContain(" ");
     })
     
-    it('should NOT have fewer than two words', () => {
-        expect(value).not.have(());
+    it('should NOT be null, must have words', () => {
+        expect(value).not.toBeNull();
     })
 
     it('throws an error with fewer than two words', () => {
@@ -35,13 +35,13 @@ describe('concatenate two smaller strings / words', () => {
 })
 
 describe('return the second word of a multi - word string', () => {
-    let value = secondWord('michael smith sings');
+    let value = secondWord('Get chocolate cake');
     
     it('should read the second word', () => {
-        expect(value).have(value.length);
+        expect(value).toContain('chocolate');
     })
-    it('should NOT be one word', () => {
-        expect(value).not.have()
+    it('should NOT have vanilla', () => {
+        expect(value).not.toContain('vanilla')
     })
 
 })

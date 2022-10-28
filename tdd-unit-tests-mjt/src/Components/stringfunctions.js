@@ -1,6 +1,6 @@
 // capitalize first letter
 function capitalize() {
-    return wordOne
+    return wordOne;
 }
 
 // concatenate two smaller strings / words
@@ -10,6 +10,6 @@ function concatString() {
 
 // return the second word of a multi - word string
 function secondWord() { 
-    return words
+    return wordString;
 }
 export {capitalize, concatString, secondWord}
